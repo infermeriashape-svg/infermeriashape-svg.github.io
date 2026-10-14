@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:SHAPE;Sezione Sanitaria ITA;;;
+FN:Sezione Sanitaria ITA SHAPE
+ORG:ITA NMR SHAPE;Sezione Sanitaria
+TEL;TYPE=WORK,VOICE,PREF:+3265445896
+TEL;TYPE=WORK,VOICE:+3265445886
+EMAIL;TYPE=INTERNET,PREF:infermeria.shape@gmail.com
+EMAIL;TYPE=INTERNET:idshape.infermeria@smd.difesa.it
+ADR;TYPE=WORK:;Stanza 1B104;SHAPE Healthcare Facility\, edificio 401;Casteau;;7010;Belgio
+NOTE:Primo numero: Sezione Sanitaria italiana (interno 5896). Secondo numero: desk prenotazioni SHF (interno 5886)\, unico canale per prenotare il medico italiano.
+END:VCARD
