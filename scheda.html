@@ -423,18 +423,12 @@ legend{font-family:var(--display);font-weight:800;font-size:1.12rem;color:var(--
       <label class="fl">Data di nascita *<input type="date" name="nascita" required autocomplete="bday"></label>
       <label class="fl">Forza Armata *
         <select name="fa" required><option value="">Scegli</option><option>Esercito</option><option>Marina</option><option>Aeronautica</option><option>Carabinieri</option></select></label>
-      <div class="g2">
-        <label class="fl">Ufficio o incarico a SHAPE<input name="ufficio"></label>
-        <label class="fl">Telefono d'ufficio o interno<input name="interno" inputmode="tel"></label>
-      </div>
+      <label class="fl">Telefono d'ufficio o interno<input name="interno" inputmode="tel"></label>
     </fieldset>
 
     <fieldset><legend>Recapiti</legend>
       <label class="fl">Cellulare *<input type="tel" name="cellulare" required autocomplete="tel" placeholder="+32 o +39"></label>
-      <div class="g2">
-        <label class="fl">Email personale *<input type="email" name="email" required autocomplete="email"></label>
-        <label class="fl">Email di servizio<input type="email" name="email_servizio"></label>
-      </div>
+      <label class="fl">Email di contatto *<input type="email" name="email" required autocomplete="email"></label>
       <label class="fl">Indirizzo in Belgio<input name="indirizzo" autocomplete="street-address"></label>
     </fieldset>
 
@@ -461,9 +455,6 @@ legend{font-family:var(--display);font-weight:800;font-size:1.12rem;color:var(--
       <p class="hint">Consegna una copia dell'idoneità alla Sezione Sanitaria, stanze 1B104 e 1B113.</p>
     </fieldset>
 
-    <fieldset><legend>Familiari a carico a SHAPE</legend>
-      <label class="fl">Per ognuno: cognome, nome, data di nascita e parentela<textarea name="familiari" rows="3"></textarea></label>
-    </fieldset>
 
     <fieldset><legend>Chi avvisare in caso di emergenza</legend>
       <div class="g2">
@@ -505,7 +496,7 @@ f.addEventListener("submit",async ev=>{
   ev.preventDefault(); const er=document.getElementById("err"); er.hidden=true;
   const miss=[...f.querySelectorAll("[required]")].filter(i=>i.type==="checkbox"?!i.checked:!i.value.trim());
   if(miss.length){er.textContent="Compila i campi obbligatori e accetta l'informativa.";er.hidden=false;miss[0].focus();return;}
-  if(f.email.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value)){er.textContent="Controlla l'email personale.";er.hidden=false;f.email.focus();return;}
+  if(f.email.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value)){er.textContent="Controlla l'email di contatto.";er.hidden=false;f.email.focus();return;}
   const b=document.getElementById("send"); b.disabled=true; b.textContent="Invio in corso";
   const body=new URLSearchParams(new FormData(f));
   let ok=false;
