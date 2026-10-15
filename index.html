@@ -21,6 +21,12 @@
 <meta name="description" content="Guida rapida della Sezione Sanitaria Italiana di SHAPE: numeri di emergenza, servizi della clinica SHF, informazioni sanitarie per la permanenza in Belgio e contatti.">
 
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#14294d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SHAPE Sanità">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="robots" content="noindex">
 <style>
 /* v4: testata ed emergenza della variante B (chiara), indice e capitoli della variante C. Un solo tema chiaro, un solo sistema di token. */
@@ -584,6 +590,14 @@ div.lead .l2{font-size:.86rem;line-height:1.5;color:var(--on-navy-muted)}
 div.lead .l3{font-size:.8rem;line-height:1.4;color:var(--on-navy);background:rgba(255,255,255,.08);border:1px solid var(--navy-rule);border-radius:14px;padding:8px 14px}
 div.lead .l3 b{color:#fff}
 .noshf strong .non{display:block;font-size:1.9rem;letter-spacing:.08em;line-height:1.05;margin:2px 0}
+/* Installazione come app */
+.app{margin-top:22px;background:var(--paper);border:1.5px solid var(--navy);border-radius:var(--r-xl);padding:16px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.app h2{font-family:var(--display);font-weight:800;font-stretch:90%;font-size:1.3rem;margin:0;color:var(--navy)}
+.app p{margin:0;max-width:52ch}
+.appic{width:64px;height:64px;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.app .btn{width:100%;max-width:320px;flex:0 1 auto}
+.howto{font-size:.9rem;color:var(--ink-2);background:var(--panel);border-radius:var(--r-m);padding:10px 12px}
+.howto.ok{color:var(--ok)}
 [hidden]{display:none!important}
 
 </style>
@@ -1083,7 +1097,17 @@ div.lead .l3 b{color:#fff}
     <noscript><p>Per inviare un messaggio scrivi a infermeria.shape@gmail.com</p></noscript>
   </section>
 
-  </main>
+    <section class="app" id="app" aria-labelledby="app-t">
+    <img src="icon-192.png" alt="" width="64" height="64" class="appic">
+    <h2 id="app-t">Installa la guida sul telefono</h2>
+    <p>Avrai l'icona sulla schermata Home e i numeri utili anche senza connessione.</p>
+    <button class="btn solid" type="button" id="instbtn" hidden>Installa l'app</button>
+    <p class="howto" id="how-ios" hidden><b>iPhone</b>: apri questa pagina con Safari, tocca il pulsante Condividi e poi «Aggiungi alla schermata Home».</p>
+    <p class="howto" id="how-and"><b>Android</b>: in Chrome tocca il menu con i tre puntini e poi «Installa app» o «Aggiungi a schermata Home».<br><b>iPhone</b>: in Safari tocca Condividi e poi «Aggiungi alla schermata Home».</p>
+    <p class="howto ok" id="how-ok" hidden><b>App già installata.</b> La stai usando dalla schermata Home.</p>
+  </section>
+
+</main>
 
   <footer>
     <div class="flagbar" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -1121,6 +1145,14 @@ fb.addEventListener("submit",async ev=>{
   try{await fetch(ENDPOINT,{method:"POST",body:new URLSearchParams(new FormData(fb)),mode:"no-cors"}); fb.hidden=true; const dn=document.getElementById("fbdone"); dn.hidden=false; dn.focus();}
   catch(x){er.textContent="Invio non riuscito: riprova o scrivi a infermeria.shape@gmail.com.";er.hidden=false;b.disabled=false;b.textContent="Invia il feedback";}
 });
+
+if("serviceWorker" in navigator){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));}
+(function(){const ib=document.getElementById("instbtn"),ios=/iphone|ipad|ipod/i.test(navigator.userAgent),st=matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+ const show=id=>{["how-ios","how-and","how-ok"].forEach(x=>document.getElementById(x).hidden=x!==id);};
+ if(st){show("how-ok");return;} if(ios){show("how-ios");}
+ let ev=null;addEventListener("beforeinstallprompt",e=>{e.preventDefault();ev=e;ib.hidden=false;});
+ ib.addEventListener("click",async()=>{if(!ev)return;ev.prompt();await ev.userChoice;ev=null;ib.hidden=true;});
+ addEventListener("appinstalled",()=>{ib.hidden=true;show("how-ok");});})();
 </script>
 
 </body>
