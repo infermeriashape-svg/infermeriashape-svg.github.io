@@ -1,10 +1,9 @@
 BEGIN:VCARD
 VERSION:3.0
-N:HELORA Kennedy;Pronto soccorso;;;
-FN:Pronto soccorso HELORA Kennedy
-ORG:CHU HELORA\, Hopital de Mons\, site Kennedy
+N:SHAPE;Patient Liaison;;;
+FN:Interprete sanitario Patient Liaison SHAPE
+ORG:SHAPE Healthcare Facility;Patient Liaison
 TEL;TYPE=WORK,VOICE,PREF:+3265414009
-TEL;TYPE=WORK,VOICE:+3265414000
-ADR;TYPE=WORK:;;Boulevard Kennedy 2;Mons;;7000;Belgio
-NOTE:Pronto soccorso 24 ore su 24\, adulti e bambini: Boulevard Kennedy 2\, Mons. Primo numero: Patient Liaison SHAPE 24 ore su 24. Secondo: centralino. In emergenza chiama il 065 44 33 33 dentro SHAPE o il 112 fuori.
+TEL;TYPE=WORK,VOICE:+3267348990
+NOTE:Interprete sanitario della clinica SHF negli ospedali belgi\, 24 ore su 24. Primo numero: Mons (HELORA Kennedy). Secondo numero: Soignies (CHR Haute Senne). In emergenza: 065 44 33 33 dentro SHAPE\, 112 fuori.
 END:VCARD
