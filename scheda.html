@@ -9,8 +9,8 @@
 <meta property="og:site_name" content="Scheda contatti militari">
 <meta property="og:title" content="Scheda contatti militari, SHAPE · Italian Section">
 <meta property="og:description" content="Guida rapida della Sezione Sanitaria italiana di SHAPE: numeri di emergenza, clinica SHF, mutua belga e contatti.">
-<meta property="og:url" content="https://infermeriashape-svg.github.io/scheda.html">
-<meta property="og:image" content="https://infermeriashape-svg.github.io/anteprima_condivisione.jpg">
+<meta property="og:url" content="https://shapeitaliansansection.github.io/scheda.html">
+<meta property="og:image" content="https://shapeitaliansansection.github.io/anteprima_condivisione.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logo della Sezione Sanitaria italiana di SHAPE">
@@ -20,8 +20,6 @@
 
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
 /* v4: testata ed emergenza della variante B (chiara), indice e capitoli della variante C. Un solo tema chiaro, un solo sistema di token. */
 :root{
@@ -383,6 +381,19 @@ header h1{text-align:center}
 .guide summary{text-align:center}
 .hours td:first-child{width:auto}
 
+/* Font ospitati sul sito (nessun collegamento a Google) */
+@font-face{font-family:"Archivo";src:url(archivo.woff2) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(atkinson-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(atkinson-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(atkinson-400i.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"MontserratL";src:url(montserrat-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"MontserratL";src:url(montserrat-800.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Cifre";src:url(montserrat-400.woff2) format("woff2");font-weight:400 600;unicode-range:U+0030-0039;font-display:swap}
+@font-face{font-family:"Cifre";src:url(montserrat-700.woff2) format("woff2");font-weight:700;unicode-range:U+0030-0039;font-display:swap}
+@font-face{font-family:"Cifre";src:url(montserrat-800.woff2) format("woff2");font-weight:800 900;unicode-range:U+0030-0039;font-display:swap}
+:root{--body:"Cifre","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif}
+body{font-family:var(--body)}
+h1{font-family:"MontserratL",var(--display);font-weight:800;font-stretch:normal;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
 
 .upd a{color:var(--on-navy);font-weight:700}
 .sheet{margin-top:-26px;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-xl);padding:16px;box-shadow:var(--shadow-card);display:flex;flex-direction:column;gap:14px}
@@ -410,6 +421,11 @@ legend{font-family:var(--display);font-weight:800;font-size:1.12rem;color:var(--
 .done h2{margin:0;font-family:var(--display);font-weight:800;color:var(--ok);font-size:1.5rem}
 .done p{margin:0}
 [hidden]{display:none!important}
+.logo{width:104px;height:104px;border-radius:18px}
+@media (max-width:479px){.hrow{flex-direction:column;gap:8px}}
+.top{justify-content:center;flex-wrap:wrap;gap:2px 10px}
+.opts-fs{border:0;padding:0;margin:0;min-width:0}
+.opts-fs legend{font-family:var(--body);font-size:.92rem;font-weight:700;color:var(--ink-2);padding:0;margin:0 auto 6px}
 legend{margin:0 auto;text-align:center}
 .fl{text-align:center}
 .fl input,.fl select,.fl textarea{text-align:center}
@@ -445,12 +461,13 @@ legend{margin:0 auto;text-align:center}
   <header>
     <div class="flagbar" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="top"><span class="who">Sezione Sanitaria Italiana · SHAPE</span><span class="upd"><a href="./">Torna a SHAPE · Italian Section</a></span></div>
-    <div class="hrow"><img class="logo" src="logo_sezione_sanitaria.png" alt="Logo della Sezione Sanitaria italiana di SHAPE" width="88" height="88"><h1>Scheda contatti militari</h1></div>
+    <div class="hrow"><img class="logo" src="logo_sezione_sanitaria.jpg" alt="Logo della Sezione Sanitaria Italiana di SHAPE" width="104" height="104"><h1>Scheda contatti militari</h1></div>
     <p class="lead">Riservata al personale militare italiano a SHAPE.<br>Compilala all'arrivo, e di nuovo se cambia qualcosa: bastano anche solo i dati nuovi.<br>Ci serve per contattarti e per tenere aggiornate le tue pratiche sanitarie.</p>
   </header>
 
+  <main id="contenuto">
   <form id="f" class="sheet" novalidate>
-    <input type="text" name="sito" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="hp" aria-hidden="true"><input type="text" name="sito" tabindex="-1" autocomplete="off"></div>
 
     <fieldset><legend>Dati del militare</legend>
       <input type="hidden" name="categoria" value="Militare">
@@ -477,12 +494,12 @@ legend{margin:0 auto;text-align:center}
         <label class="fl">Fine mandato prevista<input type="date" name="fine"></label>
       </div>
       <label class="fl">DoD ID (se già assegnato dalla clinica SHF)<input name="dodid" inputmode="numeric"></label>
-      <span class="fl">Iscrizione alla mutua belga</span>
+      <fieldset class="opts-fs"><legend>Iscrizione alla mutua belga</legend>
       <div class="opts">
         <label class="opt"><input type="radio" name="mutua" value="Iscritto"> Iscritto</label>
         <label class="opt"><input type="radio" name="mutua" value="In corso"> In corso</label>
         <label class="opt"><input type="radio" name="mutua" value="Non iscritto"> Non iscritto</label>
-      </div>
+      </div></fieldset>
       <label class="fl">Quale mutua<input name="mutua_nome" placeholder="per esempio Partenamut"></label>
     </fieldset>
 
@@ -517,15 +534,17 @@ legend{margin:0 auto;text-align:center}
     <p class="hint">I campi con * sono obbligatori.</p>
   </form>
 
-  <div class="sheet done" id="done" hidden>
+  <div class="sheet done" id="done" role="status" tabindex="-1" hidden>
     <h2>Grazie, scheda inviata</h2>
     <p>La Sezione Sanitaria ha ricevuto i tuoi dati.<br>Se qualcosa cambia, compila di nuovo la scheda, anche solo con i dati nuovi: la Sezione aggiornerà il tuo profilo.</p>
     <a class="btn solid" href="./">Torna a SHAPE · Italian Section</a>
   </div>
 
+  </main>
+
   <footer>
     <div class="flagbar" aria-hidden="true"><i></i><i></i><i></i></div>
-    <span><b>Sezione Sanitaria, ITA NMR SHAPE</b> · SHAPE Healthcare Facility, stanze <span class="room">1B104</span> e <span class="room">1B113</span> · <b class="mail">infermeria.shape@gmail.com</b></span>
+    <span><b>Sezione Sanitaria Italiana · SHAPE</b> · SHAPE Healthcare Facility, edificio 401, stanze <span class="room">1B104</span> e <span class="room">1B113</span> · <a href="mailto:infermeria.shape@gmail.com">infermeria.shape@gmail.com</a></span>
   </footer>
 </div>
 <script>
@@ -534,13 +553,14 @@ const f=document.getElementById("f");
 f.addEventListener("submit",async ev=>{
   ev.preventDefault(); const er=document.getElementById("err"); er.hidden=true;
   const miss=[...f.querySelectorAll("[required]")].filter(i=>i.type==="checkbox"?!i.checked:!i.value.trim());
-  if(miss.length){er.textContent="Compila i campi obbligatori e accetta l'informativa.";er.hidden=false;miss[0].focus();return;}
+  f.querySelectorAll("[aria-invalid]").forEach(i=>i.removeAttribute("aria-invalid"));
+  if(miss.length){miss.forEach(i=>i.setAttribute("aria-invalid","true"));const nomi=miss.map(i=>i.type==="checkbox"?"informativa privacy":(i.closest("label")?.firstChild.textContent||i.name).replace("*","").trim());er.textContent="Compila: "+nomi.join(", ")+".";er.hidden=false;miss[0].focus();return;}
   if(f.email.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value)){er.textContent="Controlla l'email di contatto.";er.hidden=false;f.email.focus();return;}
   const b=document.getElementById("send"); b.disabled=true; b.textContent="Invio in corso";
   const body=new URLSearchParams(new FormData(f));
   let ok=false;
   try{await fetch(ENDPOINT,{method:"POST",body,mode:"no-cors"}); ok=true;}catch(y){ok=false;}
-  if(ok){f.hidden=true;document.getElementById("done").hidden=false;window.scrollTo(0,0);}
+  if(ok){f.hidden=true;const d=document.getElementById("done");d.hidden=false;window.scrollTo(0,0);d.focus();}
   else{er.textContent="Invio non riuscito. Controlla la connessione e riprova, oppure scrivi a infermeria.shape@gmail.com.";er.hidden=false;b.disabled=false;b.textContent="Invia la scheda";}
 });
 </script>

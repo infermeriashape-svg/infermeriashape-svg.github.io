@@ -6,6 +6,6 @@ ORG:ITA NMR SHAPE;Sezione Sanitaria
 TEL;TYPE=WORK,VOICE,PREF:+3265445886
 EMAIL;TYPE=INTERNET,PREF:infermeria.shape@gmail.com
 EMAIL;TYPE=INTERNET:idshape.infermeria@smd.difesa.it
-ADR;TYPE=WORK:;Stanze 1B104 e 1B113\, piano terra;SHAPE Healthcare Facility\, edificio 401;Casteau;;7010;Belgio
-NOTE:Il numero e il desk prenotazioni della clinica SHF\, unico canale per prenotare una visita con il medico italiano.
+ADR;TYPE=WORK:;Stanze 1B104 e 1B113\, piano terra;SHAPE Healthcare Facility\, edificio 401;SHAPE;;7010;Belgio
+NOTE:Il numero corrisponde al desk prenotazioni della clinica SHF\, unico canale per prenotare una visita con il medico italiano.
 END:VCARD
