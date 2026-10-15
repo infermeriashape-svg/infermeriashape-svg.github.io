@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SHAPE Healthcare · Italian Section</title>
+<title>SHAPE Healthcare Italian Section</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="SHAPE Healthcare · Italian Section">
-<meta property="og:title" content="SHAPE Healthcare · Italian Section">
+<meta property="og:site_name" content="SHAPE Healthcare Italian Section">
+<meta property="og:title" content="SHAPE Healthcare Italian Section">
 <meta property="og:description" content="Guida rapida della Sezione Sanitaria Italiana di SHAPE: numeri di emergenza, servizi della clinica SHF, informazioni sanitarie per la permanenza in Belgio e contatti.">
 <meta property="og:url" content="https://shapeitaliansansection.github.io/">
 <meta property="og:image" content="https://shapeitaliansansection.github.io/anteprima_shape_healthcare.jpg">
@@ -566,13 +566,24 @@ html{scroll-padding-bottom:100px}
 .hw{display:block;text-align:center}
 .hw .i{display:inline-block;vertical-align:-3px;margin-right:4px}
 .guide summary{min-height:44px}
-.svc .acts a,.body .ln>a,.svc>span>a{min-height:44px;display:inline-flex;align-items:center}
+.svc .acts a{min-height:44px;display:inline-flex;align-items:center}
+.body .ln>a:not([class]){display:inline;min-height:0;padding-block:.3em}
 @media (min-width:640px){.hrow{gap:22px}.lead{max-width:56ch}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wk tr.oggi{outline:0}
 .wk tr.oggi>*{box-shadow:inset 0 2px var(--c),inset 0 -2px var(--c);background:var(--cs)}
 .gm{display:block;font-size:.88rem;color:var(--ink-2)}
 
+.big .int{font-size:.92rem;color:var(--ink-2);font-weight:700}
+/* Testo introduttivo */
+div.lead{max-width:54ch;margin:4px auto 0;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+div.lead p{margin:0;text-wrap:pretty}
+div.lead .l1{font-size:.98rem;color:var(--on-navy)}
+div.lead .l1 b{color:#fff}
+div.lead .l2{font-size:.86rem;line-height:1.5;color:var(--on-navy-muted)}
+div.lead .l3{font-size:.8rem;line-height:1.4;color:var(--on-navy);background:rgba(255,255,255,.08);border:1px solid var(--navy-rule);border-radius:14px;padding:8px 14px}
+div.lead .l3 b{color:#fff}
+.noshf strong .non{display:block;font-size:1.9rem;letter-spacing:.08em;line-height:1.05;margin:2px 0}
 [hidden]{display:none!important}
 
 </style>
@@ -622,21 +633,26 @@ html{scroll-padding-bottom:100px}
   <header>
     <div class="flagbar" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="top"><span class="who">Sezione Sanitaria Italiana · SHAPE</span><span class="upd">Aggiornato al 15.10.2026</span></div>
-    <div class="hrow"><img class="logo" src="logo_sezione_sanitaria.jpg" alt="Logo della Sezione Sanitaria Italiana di SHAPE" width="120" height="120"><h1 lang="en">SHAPE&nbsp;Healthcare&nbsp;·<wbr> Italian&nbsp;Section</h1></div>
-    <p class="lead">Questa è una guida rapida della Sezione Sanitaria Italiana di SHAPE.<br>Qui trovi i principali numeri di emergenza, i servizi della clinica SHAPE Healthcare Facility (SHF), alcune informazioni utili sugli aspetti sanitari per la permanenza in Belgio e i nostri contatti.<br>I servizi della clinica sono a disposizione di tutto il personale munito di SHAPE ID e registrato presso la SHF.</p>
+    <div class="hrow"><img class="logo" src="logo_sezione_sanitaria.jpg" alt="Logo della Sezione Sanitaria Italiana di SHAPE" width="120" height="120"><h1 lang="en">SHAPE&nbsp;Healthcare <wbr>Italian&nbsp;Section</h1></div>
+    <div class="lead">
+      <p class="l1">Questa è una guida rapida della <b>Sezione Sanitaria Italiana</b> di SHAPE.</p>
+      <p class="l2">Qui trovi i principali numeri di emergenza, i servizi della clinica SHAPE Healthcare Facility (SHF), alcune informazioni utili sugli aspetti sanitari per la permanenza in Belgio e i nostri contatti.</p>
+      <p class="l3">I servizi della clinica sono a disposizione di tutto il personale munito di <b>SHAPE ID</b> e registrato presso la SHF.</p>
+    </div>
   </header>
 
   <main id="contenuto">
   <section class="sos" id="emergenza" aria-labelledby="sos-t">
     <div class="sos-h"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-cross"/></svg></span><h2 id="sos-t">Emergenza</h2></div>
 
-    <div class="noshf" role="note"><svg class="i" aria-hidden="true"><use href="#i-noentry"/></svg><span><strong>La clinica SHF NON tratta le emergenze.</strong>Non ha pronto soccorso: per un'urgenza non andare in clinica, chiama i numeri qui sotto.</span></div>
+    <div class="noshf" role="note"><svg class="i" aria-hidden="true"><use href="#i-noentry"/></svg><span><strong>La clinica SHF<span class="non">NON</span>tratta le emergenze.</strong>Non ha pronto soccorso: per un'urgenza non andare in clinica, chiama i numeri qui sotto.</span></div>
 
     <div class="where">Emergenze all'interno di SHAPE</div>
     <a class="big" href="tel:+3265443333">
       <span class="why"><span class="ring" aria-hidden="true"><svg class="i"><use href="#i-phone"/></svg></span><span>Joint Police Desk, 24 ore su 24, emergenze sanitarie e non</span></span>
       <span class="num">065 44 33 33</span>
       <span class="num2">Servizio in inglese</span>
+      <span class="int">Da un telefono fisso della base: 3333</span>
     </a>
     <a class="big b2" href="tel:+3265443334">
       <span class="why"><span class="ring" aria-hidden="true"><svg class="i"><use href="#i-phone"/></svg></span><span>Stesso servizio, per parlare in francese</span></span>
@@ -753,6 +769,7 @@ html{scroll-padding-bottom:100px}
 <span class="ln">Prenota sempre tramite il desk della clinica.</span>
 <span class="ln">Oltre al medico italiano la clinica ha altri medici: se l'agenda è piena chiedi un altro provider.</span></li>
         <li><b>Medico di famiglia belga, fuori dalla SHF</b>
+<span class="ln">Ti consigliamo di scegliere anche un medico di famiglia belga: sarà il tuo riferimento quando la SHF è chiusa, la sera, nel weekend e nei festivi.</span>
 <span class="ln">Puoi cercarne uno che parla italiano o inglese su <a href="https://www.doctoranytime.be/en" target="_blank" rel="noopener">doctoranytime.be</a>, filtrando per lingua.</span>
 <span class="ln">La tariffa la decide il medico; la mutua rimborsa sulla tariffa ufficiale.</span>
 <span class="ln">Per esempio parla italiano la <a href="https://rosa.be/en/hp/antonella-abbonizio/" target="_blank" rel="noopener">dott.ssa Antonella Abbonizio</a>, medico di medicina generale alla Clinique de la Brisée, Maisières.</span>
