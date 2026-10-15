@@ -603,7 +603,15 @@ div.lead .l3 b{color:#fff}
 .hrow h1{text-align:center;width:100%}
 .top{flex-direction:column!important;align-items:center!important;gap:2px!important}
 .mini .acts.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;max-width:440px;margin:0 auto}
-.mini .acts.grid2 a{justify-content:center;padding:4px 8px;font-size:.95rem;white-space:nowrap}
+.mini{grid-template-columns:minmax(0,1fr)!important}
+@media (min-width:640px){.mini{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}}
+.mini>div{min-width:0}
+.mini .acts.grid2 a{justify-content:center;padding:4px 6px;font-size:.9rem;white-space:normal;min-width:0;text-align:center;gap:5px;line-height:1.15}
+.mini .acts.grid2 a .i{flex:none;width:16px;height:16px}
+a.map,a.tel{max-width:100%}
+.pharm a.map,.ph3 a.map{white-space:normal;min-width:0;text-align:center}
+.pharm{grid-template-columns:minmax(0,1fr)}
+@media (min-width:640px){.pharm{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 [hidden]{display:none!important}
 
 </style>
