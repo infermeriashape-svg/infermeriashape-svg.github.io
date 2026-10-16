@@ -1,10 +1,10 @@
 // Funzionamento offline della guida SHAPE Healthcare Italian Section.
 // Le pagine si scaricano sempre aggiornate dalla rete; se la rete manca si usa la copia salvata.
-const VERSIONE = 'shi-2026-10-16b';
+const VERSIONE = 'shi-2026-10-16d';
 const BASE = [
   './', 'index.html', 'scheda.html', 'manifest.webmanifest',
   'emergenza.vcf', 'kennedy.vcf', 'sezione.vcf',
-  'logo_sezione_sanitaria.jpg', 'logo_shf_bandiere.jpg', 'edificio_401_SHF.jpg', 'favicon.png',
+  'logo_sezione_sanitaria.jpg', 'edificio_401_SHF.jpg', 'favicon.png',
   'icon-192.png', 'icon-512.png',
   'archivo.woff2', 'atkinson-400.woff2', 'atkinson-400i.woff2', 'atkinson-700.woff2',
   'montserrat-400.woff2', 'montserrat-700.woff2', 'montserrat-800.woff2'
